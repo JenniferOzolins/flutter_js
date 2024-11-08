@@ -14,9 +14,14 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 34
-
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JavaVersion.VERSION_17
     }
 
     // //quickjs C build disabled for now - crashing with SEGV_MAPERR on ARM based devices
